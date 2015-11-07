@@ -9,10 +9,14 @@ For example, if an app requires root, instead of just displaying a generic notic
 String url = "http://helproot.me/" + android.os.Build.DEVICE
 ```
 
-For example, on the "Nexus 6P" the url will be [helproot.me/grouper](http://helproot.me/grouper)
+For example, on the "Nexus 6P" the url will be [helproot.me/angler](http://helproot.me/angler)
 
 ### Contributing
 Feel free to apply instructions for a specific device via a pull request to this repo! If the device cannot be found, the 404 page will attempt to provide more generic instructions. Due to the vast number of android devices, however, specific instructions for the exact model of device is preferred.
+
+Device names are retreived from the Device column of [Google's official PDF](https://support.google.com/googleplay/answer/1727131?hl=en) of supported devices
+
+Generally, to contribute means making a folder for the specific device and including the index.html file in that folder with instructions.
 
 ### Goal
 Let's make rooting a (relatively) painless thing to do for users who otherwise wouldn't know how to root their specific model of phone! 

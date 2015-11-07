@@ -1,30 +1,35 @@
 <html>
 
 <head>
+	<title>helproot.me</title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="script.js"></script>
 </head>
 
-<body>
+<body onload="makeTable()">
 	<div class="topbar">
 		<div class="container">
-		help<span class="highlight">root</span>.me
+			help<span class="highlight">root</span>.me
+			
+			<span class="right">Contribute on <a href="http://github.com/vgmoose/helproot.me">GitHub</a></span>
+		</div>
+	</div>
+	<div class="content container main">
+		<div>
+			help<span class="highlight">root</span>.me/<input type="text" list="phones" id="dname" placeholder="device" />
+			<button onclick="go()">go</button>
+			<datalist id="phones">
+			</datalist>
 		</div>
 	</div>
 	<div class="content container">
-<!--
-	<div>
-		Welcome to help.me
+	Supported Devices
+		<div id="tableview">
+		
+		</div>
 	</div>
--->
-	<div>
-		help<span class="highlight">root</span>.me/<input type="text" list="phones" id="dname" placeholder="device name" /> <button onclick="go()">go</button>
-		<datalist id="phones">
-		</datalist>
-		<select hidden>
-			<option value="toro">Galaxy Nexus</option>
-		</select>
-	</div>
+	<div class="content container footer">
+	Copyright &copy; 2015 <a href="http://rickyayoub.com">Ricky Ayoub</a> (<a href="http://vgmoose.com">VGMoose</a>)
 	</div>
 </body>
 
