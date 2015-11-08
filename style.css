@@ -107,6 +107,42 @@ h3
 	margin: 0 auto;
 }
 
+.deviceinfo
+{
+	width: 400px;
+	height: 201px;
+	margin: 0 auto;
+}
+
+.leftpane
+{
+	float: left;
+}
+
+.rightpane
+{
+	font-size: 25px;
+	float: right;
+}
+
+.red
+{
+	color: red;
+	font-weight: bold;
+}
+
+.green
+{
+	color: limegreen;
+	font-weight: bold;
+}
+
+
+.leftpane img
+{
+	height: 200px;
+}
+
 p
 {
 	text-align: left;
