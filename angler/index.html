@@ -1,0 +1,120 @@
+<!-- helproot.me header code BEGIN -->
+<head>
+	<title>helproot.me</title>
+	<link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+	<div class="topbar">
+		<div class="container">
+			help<span class="highlight">root</span>.me
+			
+			<span class="right">Contribute on <a href="http://github.com/vgmoose/helproot.me">GitHub</a></span>
+		</div>
+	</div>
+<!-- helproot.me header code END -->
+	
+	<div class="bubble">
+		<div class="deviceinfo">
+			<div class="leftpane">
+				<img src="phone.png"></img>
+			</div>
+			<div class="rightpane">
+				<table>
+				<tr>
+					<td>Name</td>
+					<td>Huawei Nexus 6P</td>
+				</tr>
+				<tr>
+					<td>Device</td>
+					<td>angler</td>
+				</tr>
+				<tr>
+					<td>Model</td>
+					<td>Nexus 6P</td>
+				</tr>
+				<tr>
+					<td>Bootloader</td>
+					<td>Unlockable</td>
+				</tr>
+				<tr>
+					<td>Root</td>
+					<td>Available</td>
+				</tr>
+				</table>
+				
+			</div>
+		</div>
+	</div>
+
+<!-- helproot.me body code START -->
+	<div class="bubble">
+		<h3>What is root?</h3>
+		<p>
+			You may have seen people on the Internet refer to "rooting" their Android devices. On the surface, rooting is similar to <a href="https://en.wikipedia.org/wiki/IOS_jailbreaking">iOS Jailbreaking</a>. By rooting your device, you are enabling system-level access to your phone. There are a number of reasons why you would and wouldn't want to do this. Ultimately, though, the decision of whether or not to root your phone is up to you. Most phone and tablet manufacturers don't offer support for rooted phones. You proceed at your own risk.
+		</p>
+	</div>
+<!-- helproot.me body code END -->
+	<div class="bubble">
+		<h3>How to root the Huawei Nexus 6P</h3>
+		<p>
+			Rooting a nexus device fortuantely is not as complicated as rooting most other Android devices. To do this, you will have to follow the below steps, and they are also outlined on other site across the web such as <a href="http://ausdroid.net/howto/root-nexus-6p/">here</a> and <a href="http://www.gammerson.com/2015/09/How-To-Root-Huawei-Nexus-6P-Beginners-Guide.html">here</a>. You are encouraged to both check out those two links and do research on your own in addition to reviewing the steps below.
+		</p>
+		<p>
+			Obtaining root on your nexus will come in three parts, outlined below:
+		</p>
+		<ol>
+				<li>Unlocking the bootloader (this wipes data!)</li>
+				<li>Installing a custom recovery</li>
+				<li>Installing the SuperSU binary</li>
+			</ol>
+		<p>
+		If you are not satisfied with your root, you can download the <a href="http://www.gammerson.com/2015/09/How-To-Root-Huawei-Nexus-6P-Beginners-Guide.html">Factory recover images</a>, and follow the instructions there to remove it.
+		</p>
+		<p>
+			First download this <a href="http://forum.xda-developers.com/apps/supersu/wip-android-6-0-marshmellow-t3219344">modified boot image</a>, <a href="http://www.teamw.in/devices/huaweinexus6p.html">TWRP Recovery</a>, <a href="http://forum.xda-developers.com/apps/supersu/2014-09-02-supersu-v2-05-t2868133">SuperSU</a>, and the <a href="http://developer.android.com/tools/sdk/tools-notes.html">Android SDK Tools</a>. You will then want to enable developer mode on your phone by tapping the "Build Version" in "About" in "Settings" seven times. After doing that, go back and enter the Developer settings. Check OEM Unlocking and USB Debugging.
+		</p>
+		<p>
+			On your computer, run adb in the command line. If you do not know how to do that, check out <a href="http://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/">this article</a>. Connect your phone, and from adb in either Terminal or CMD execute: <code>adb reboot bootloader</code>. This will put your phone into bootloader mode. Then run <code>fastboot flashing unlock</code> once it is ready. WARNING: Unlocking your phone WILL WIPE ALL DATA. This is a security feature. Make a backup before this step if you don't want to lose your information.
+		</p>
+		<p>
+			After your phone is unlocked, let it reboot, and after it boots up, run <code>adb reboot bootloader</code> again. Once there, this time, weill want to do four things: flash the modified boot image, install superSu, format the data, and install a custom recovery. First flash the boot image with <code>fastboot boot name-of-boot.img</code>, then run <code>fastboot format userdata</code>, then <code>fastboot flash name-of-recovery.img</code>, and <code>adb push SuperSU.zip /sdcard</code>. If these instructions aren't specific enough, you are strongly adviced to see the webapge <a href="http://ausdroid.net/howto/root-nexus-6p/">here</a> for more information, or to look up a youtube tutorial.
+</p>
+		<p>Once it's all done, run <code>adb reboot recovery</code>, and you want to "flash" the SuperSU.zip file. This is the actual part of the procedure that roots the phone. After that, reboot the system and hope that your phone boots. If it doesn't, don't sweat, and try to refollow some of the instructions. No exploits are being used so your phone isn't at much risk.</p>
+	</div>
+<div class="bubble">
+		<h3>Useful tips</h3>
+		<p>
+			If you hold the sleep button plus the volume down button, you will enter the bootloader mode. If you hold the sleep button plus the volume up button, you will enter recovery. Use these tips if your phone becomes unresponsive and won't boot at any point during the steps. 
+	</p>
+</div>
+	
+<!--
+	<div class="bubble">
+		<h3>What is root?</h3>
+		<p>
+			
+	</div>
+-->
+
+	<script>
+		var deviceName = window.location.href.substring(window.location.href.indexOf('#')+1);
+		var elems = document.getElementsByClassName("mydevice");
+
+		if (window.location != deviceName && deviceName != "")
+		{
+			for (var x=0; x<elems.length; x++)
+			{
+				var dev = elems[x];
+				console.log(elems);
+				dev.innerHTML = deviceName;
+			}
+		}
+	</script>
+	
+<!-- helproot.me template code BEGIN -->
+	<div class="content container footer">
+	Copyright &copy; 2015 <a href="http://rickyayoub.com">Ricky Ayoub</a> (<a href="http://vgmoose.com">VGMoose</a>)
+	</div>
+</body>
+<!-- helproot.me template code END -->
