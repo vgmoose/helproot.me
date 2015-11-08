@@ -1,0 +1,60 @@
+<!-- helproot.me header code BEGIN -->
+<head>
+	<title>helproot.me</title>
+	<link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+	<div class="topbar">
+		<div class="container">
+			help<span class="highlight">root</span>.me
+			
+			<span class="right">Contribute on <a href="http://github.com/vgmoose/helproot.me">GitHub</a></span>
+		</div>
+	</div>
+<!-- helproot.me header code END -->
+
+<!-- helproot.me body code START -->
+	<div class="bubble">
+		<h3>What is root?</h3>
+		<p>
+			You may have seen people on the Internet refer to "rooting" their Android devices. On the surface, rooting is similar to <a href="https://en.wikipedia.org/wiki/IOS_jailbreaking">iOS Jailbreaking</a>. By rooting your device, you are enabling system-level access to your phone. There are a number of reasons why you would and wouldn't want to do this. Ultimately, though, the decision of whether or not to root your phone is up to you. Most phone and tablet manufacturers don't offer support for rooted phones. You proceed at your own risk.
+		</p>
+	</div>
+<!-- helproot.me body code END -->
+	<div class="bubble">
+		<h3>How to root the Verizon Motorola Droid Razr M</h3>
+		<p>
+			The Razr M's bootloader is locked, however there exists an exploit that will allow you to root it. If you are on a Windows computer, you can use <a href="http://forum.xda-developers.com/showpost.php?p=32888705&postcount=1">motofail2go</a>. Another tool that you can use, especially on Linux or OS X is located <a href="http://www.mediafire.com/?f4lipgd1hh3jug2">here</a>, and <a href="http://forum.xda-developers.com/showthread.php?t=2227938">this XDA thread</a> details the process.
+		</p>
+	</div>
+	
+<!--
+	<div class="bubble">
+		<h3>What is root?</h3>
+		<p>
+			
+	</div>
+-->
+
+	<script>
+		var deviceName = window.location.href.substring(window.location.href.indexOf('#')+1);
+		var elems = document.getElementsByClassName("mydevice");
+
+		if (window.location != deviceName && deviceName != "")
+		{
+			for (var x=0; x<elems.length; x++)
+			{
+				var dev = elems[x];
+				console.log(elems);
+				dev.innerHTML = deviceName;
+			}
+		}
+	</script>
+	
+<!-- helproot.me template code BEGIN -->
+	<div class="content container footer">
+	Copyright &copy; 2015 <a href="http://rickyayoub.com">Ricky Ayoub</a> (<a href="http://vgmoose.com">VGMoose</a>)
+	</div>
+</body>
+<!-- helproot.me template code END -->
