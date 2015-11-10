@@ -96,22 +96,6 @@
 			
 	</div>
 -->
-
-	<script>
-		var deviceName = window.location.href.substring(window.location.href.indexOf('#')+1);
-		var elems = document.getElementsByClassName("mydevice");
-
-		if (window.location != deviceName && deviceName != "")
-		{
-			for (var x=0; x<elems.length; x++)
-			{
-				var dev = elems[x];
-				console.log(elems);
-				dev.innerHTML = deviceName;
-			}
-		}
-	</script>
-	
 <!-- helproot.me template code BEGIN -->
 	<div class="content container footer">
 	Copyright &copy; 2015 <a href="http://rickyayoub.com">Ricky Ayoub</a> (<a href="http://vgmoose.com">VGMoose</a>)
